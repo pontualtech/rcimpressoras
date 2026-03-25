@@ -156,28 +156,38 @@
   stats.forEach(el => io.observe(el));
 })();
 
-/* ── Contact Form — WhatsApp redirect ── */
+/* ── Contact Form — Formsubmit.co submission ── */
 (function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  // Validate required fields; let browser native submit handle the POST
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     const name  = (form.querySelector('[name="nome"]')?.value || '').trim();
     const tel   = (form.querySelector('[name="telefone"]')?.value || '').trim();
     const marca = (form.querySelector('[name="marca"]')?.value || '').trim();
     const prob  = (form.querySelector('[name="problema"]')?.value || '').trim();
 
-    let msg = `Olá! Gostaria de solicitar um orçamento.\n`;
-    if (name)  msg += `*Nome:* ${name}\n`;
-    if (tel)   msg += `*Telefone:* ${tel}\n`;
-    if (marca) msg += `*Marca/Modelo:* ${marca}\n`;
-    if (prob)  msg += `*Problema:* ${prob}`;
-
-    const url = `https://wa.me/551131360415?text=${encodeURIComponent(msg)}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (!name || !tel || !marca || !prob) {
+      e.preventDefault();
+      const first = form.querySelector('[name="nome"],[name="telefone"],[name="marca"],[name="problema"]');
+      if (first) first.focus();
+      return;
+    }
+    // Validation passed — allow native form submit to Formsubmit.co
   });
+
+  // Show success message if redirected back with ?enviado=1
+  if (window.location.search.includes('enviado=1')) {
+    const wrap = form.closest('.contact-form-wrap') || form.parentElement;
+    const banner = document.createElement('div');
+    banner.setAttribute('role', 'alert');
+    banner.style.cssText = 'background:#1a3a28;border:2px solid #25d366;border-left:6px solid #25d366;padding:1.2rem 1.4rem;margin-bottom:1.2rem;font-family:var(--font-heading);font-size:1rem;color:#fff;';
+    banner.innerHTML = '<strong style="color:#25d366;">Mensagem enviada!</strong> Retornaremos em breve pelo WhatsApp ou e-mail.';
+    wrap.insertBefore(banner, form);
+    form.style.opacity = '0.4';
+    form.style.pointerEvents = 'none';
+  }
 })();
 
 /* ── Smooth anchor scroll (legacy support) ── */
