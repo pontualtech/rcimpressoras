@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Dicas de Manutenção de Impressoras | RC Impressoras</title>
+  <meta name="description" content="Guia prático: impressora não imprime, manchas, cabeçote sujo. Dicas de manutenção + assistência técnica industrial em São Paulo.">
+  <meta name="keywords" content="impressora não imprime, limpar cabeçote impressora, impressora falhando, conserto impressora preço, impressora com mancha, manutenção impressora SP">
+  <link rel="canonical" href="https://rcimpressoras.com/dicas.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dicas de Manutenção de Impressoras | RC Impressoras">
+  <meta property="og:description" content="Guia prático: impressora não imprime, manchas, cabeçote sujo. Dicas de manutenção + assistência técnica industrial em São Paulo.">
+  <meta property="og:url" content="https://rcimpressoras.com/dicas.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Geo Meta Tags -->
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="Vila Mariana, São Paulo">
+  <meta name="geo.position" content="-23.5872;-46.6368">
+  <meta name="ICBM" content="-23.5872, -46.6368">
+  <meta name="author" content="RC Impressoras">
+  <meta name="revisit-after" content="7 days">
+  <meta name="language" content="pt-BR">
+
+  <!-- Fonts (preconnect first) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formsubmit.co">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Critical inline CSS -->
+  <style>
+    body{background:#1c1c1e;color:#f1f1f1}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(28,28,30,.95);border-bottom:2px solid #e63946;height:70px}
+
+    /* ── Page Hero (compact) ── */
+    .page-hero{padding:120px 0 60px;background:linear-gradient(135deg,#1c1c1e 60%,#2a0a0a 100%);border-bottom:2px solid #e63946;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(230,57,70,.06) 59px,rgba(230,57,70,.06) 60px);pointer-events:none}
+    .page-hero-tag{display:inline-block;font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#e63946;background:rgba(230,57,70,.12);border:1px solid rgba(230,57,70,.3);padding:.3rem .9rem;border-radius:2px;margin-bottom:1rem}
+    .page-hero h1{font-family:'Oswald',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.1;margin-bottom:.75rem}
+    .page-hero h1 span{color:#e63946}
+    .page-hero-sub{color:#a0a0a8;font-size:1rem;max-width:600px}
+
+    /* ── Breadcrumb ── */
+    .breadcrumb{padding:.75rem 0;background:#141416;border-bottom:1px solid #2a2a2e}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;font-size:.82rem;color:#a0a0a8}
+    .breadcrumb li+li::before{content:'›';margin-right:.4rem;color:#e63946}
+    .breadcrumb a{color:#a0a0a8;text-decoration:none;transition:color .2s}
+    .breadcrumb a:hover{color:#e63946}
+    .breadcrumb [aria-current]{color:#f1f1f1;font-weight:500}
+
+    /* ── Tips Layout ── */
+    .tips-page{padding:80px 0}
+    .tips-toc{background:#141416;border:1px solid #2a2a2e;border-left:3px solid #e63946;padding:1.5rem 2rem;margin-bottom:3rem;border-radius:0 4px 4px 0}
+    .tips-toc p{font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#e63946;margin:0 0 .75rem}
+    .tips-toc ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.4rem}
+    .tips-toc a{color:#c8c8d0;text-decoration:none;font-size:.9rem;transition:color .2s}
+    .tips-toc a:hover{color:#e63946}
+
+    /* ── Tip Section ── */
+    .tip-section{margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid #2a2a2e}
+    .tip-section:last-of-type{border-bottom:none}
+    .tip-section-tag{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#e63946;margin-bottom:.6rem}
+    .tip-section h2{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:700;line-height:1.2;margin-bottom:1.25rem;color:#f1f1f1}
+    .tip-section h2 span{color:#e63946}
+    .tip-divider{width:48px;height:3px;background:#e63946;margin-bottom:1.5rem}
+    .tip-section p{color:#c8c8d0;line-height:1.75;margin-bottom:1rem;font-size:.97rem}
+
+    /* Checklist */
+    .tip-checklist{list-style:none;padding:0;margin:1.25rem 0 1.5rem;display:flex;flex-direction:column;gap:.6rem}
+    .tip-checklist li{display:flex;align-items:flex-start;gap:.75rem;color:#c8c8d0;font-size:.95rem;line-height:1.5}
+    .tip-checklist li::before{content:'';flex-shrink:0;width:18px;height:18px;margin-top:1px;background:#e63946;clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0%,43% 62%);display:block}
+
+    /* Step List */
+    .tip-steps{list-style:none;padding:0;margin:1.25rem 0 1.5rem;counter-reset:steps;display:flex;flex-direction:column;gap:1rem}
+    .tip-steps li{counter-increment:steps;display:grid;grid-template-columns:36px 1fr;gap:.75rem;align-items:flex-start}
+    .tip-steps li::before{content:counter(steps);font-family:'Oswald',sans-serif;font-weight:700;font-size:.85rem;color:#1c1c1e;background:#e63946;width:28px;height:28px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .tip-steps li span{color:#c8c8d0;font-size:.95rem;line-height:1.6}
+    .tip-steps li strong{color:#f1f1f1}
+
+    /* Price Table */
+    .price-table{width:100%;border-collapse:collapse;margin:1.25rem 0 1.5rem;font-size:.9rem}
+    .price-table th{background:#e63946;color:#fff;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.7rem 1rem;text-align:left;font-size:.8rem}
+    .price-table td{padding:.65rem 1rem;border-bottom:1px solid #2a2a2e;color:#c8c8d0;line-height:1.4}
+    .price-table tr:last-child td{border-bottom:none}
+    .price-table tr:nth-child(even) td{background:#141416}
+    .price-table .price-val{color:#f1f1f1;font-weight:600;white-space:nowrap}
+
+    /* Diagnosis Grid */
+    .diag-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.25rem 0 1.5rem}
+    .diag-card{background:#141416;border:1px solid #2a2a2e;border-top:3px solid #e63946;padding:1.25rem;border-radius:0 0 4px 4px}
+    .diag-card-title{font-family:'Oswald',sans-serif;font-weight:600;color:#f1f1f1;font-size:.95rem;margin-bottom:.5rem}
+    .diag-card p{color:#a0a0a8;font-size:.85rem;margin:0;line-height:1.5}
+
+    /* Causes List (mancha section) */
+    .causes-list{list-style:none;padding:0;margin:1.25rem 0 1.5rem;display:flex;flex-direction:column;gap:.75rem}
+    .causes-list li{padding:.75rem 1rem;background:#141416;border-left:3px solid #e63946;color:#c8c8d0;font-size:.93rem;line-height:1.5;border-radius:0 4px 4px 0}
+    .causes-list strong{color:#f1f1f1;display:block;margin-bottom:.2rem}
+
+    /* CTA Box */
+    .tip-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(135deg,#1a0508,#2a0a0a);border:1px solid rgba(230,57,70,.4);border-left:4px solid #e63946;padding:1.25rem 1.5rem;border-radius:0 4px 4px 0;margin-top:1.75rem}
+    .tip-cta p{margin:0;color:#c8c8d0;font-size:.9rem;line-height:1.5}
+    .tip-cta strong{color:#f1f1f1;display:block;font-size:1rem;margin-bottom:.25rem}
+    .tip-cta a.btn{flex-shrink:0;display:inline-flex;align-items:center;gap:.5rem}
+
+    /* Sidebar sticky note */
+    .tip-note{background:#141416;border:1px solid #2a2a2e;border-left:3px solid #f4a261;padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin:1.25rem 0;font-size:.88rem;color:#a0a0a8;line-height:1.6}
+    .tip-note strong{color:#f4a261}
+
+    @media(max-width:640px){
+      .price-table th,.price-table td{padding:.5rem .6rem;font-size:.82rem}
+      .tip-cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que fazer quando a impressora não imprime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Verifique os cabos e a conexão USB ou Wi-Fi, limpe a fila de impressão, atualize ou reinstale os drivers, confira o nível de toner ou tinta e imprima uma página de teste pelo painel da impressora. Se o problema persistir, chame um técnico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como limpar o cabeçote da impressora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a função de limpeza de cabeçote disponível nas configurações de impressão do Windows ou no painel da própria impressora. Para limpeza manual, desligue o equipamento, remova o cartucho e passe um pano de microfibra levemente umedecido em álcool isopropílico nos bicos do cabeçote. Repita a cada 30 dias de uso intenso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que a impressora está falhando na impressão?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As causas mais comuns são: cabeçote entupido ou desgastado, toner ou tinta em nível crítico, rolos de alimentação sujos ou gastos e papel úmido. Faça um diagnóstico por partes antes de trocar peças."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto custa consertar uma impressora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Limpeza geral custa entre R$ 80 e R$ 150. Troca de peças como rolos e sensores fica entre R$ 150 e R$ 350. Reparo de placa ou cabeçote industrial pode variar entre R$ 300 e R$ 600. O diagnóstico na RC Impressoras é gratuito."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que a impressora está saindo com mancha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manchas geralmente indicam toner espalhado por cilindro danificado, fusor com defeito, cabeçote de tinta sujo ou cartucho com vazamento. Soluções caseiras como limpeza de cabeçote ajudam em casos leves; problemas no fusor ou cilindro exigem assistência técnica."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://rcimpressoras.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dicas de Manutenção",
+        "item": "https://rcimpressoras.com/dicas.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://rcimpressoras.com/dicas.html",
+        "url": "https://rcimpressoras.com/dicas.html",
+        "name": "Dicas de Manutenção de Impressoras | RC Impressoras",
+        "description": "Guia prático: impressora não imprime, manchas, cabeçote sujo. Dicas de manutenção + assistência técnica industrial em São Paulo.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {"@id": "https://rcimpressoras.com/#website"},
+        "about": {"@id": "https://rcimpressoras.com/#business"},
+        "breadcrumb": {"@id": "https://rcimpressoras.com/dicas.html#breadcrumb"},
+        "dateModified": "2026-03-25"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rcimpressoras.com/#organization",
+        "name": "RC Impressoras",
+        "url": "https://rcimpressoras.com",
+        "logo": "https://rcimpressoras.com/logo.png",
+        "telephone": "+55-11-3136-0415",
+        "email": "contato@rcimpressoras.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Ouvidor Peleja, 660",
+          "addressLocality": "Vila Mariana",
+          "addressRegion": "SP",
+          "postalCode": "04128-001",
+          "addressCountry": "BR"
+        },
+        "sameAs": ["https://wa.me/551131360415"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     HEADER / NAV
+════════════════════════════════════════════════ -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Navegação principal">
+      <a href="index.html" class="nav-logo" aria-label="RC Impressoras — Página inicial">
+        <span class="logo-main"><span>RC</span> Impressoras</span>
+        <span class="logo-sub">Assistência Técnica · Vila Mariana</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="dicas.html" class="active" aria-current="page">Dicas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <span class="nav-phone">(11) 3136-0415</span>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Orçamento
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Navegação mobile">
+  <a href="index.html">Início</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="dicas.html" style="color:var(--primary)">Dicas</a>
+  <a href="contato.html">Contato</a>
+  <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" style="color:var(--primary);margin-top:.5rem">WhatsApp: (11) 3136-0415</a>
+</nav>
+
+<main>
+
+<!-- ── Breadcrumb ── -->
+<div class="breadcrumb" aria-label="Caminho da página">
+  <div class="container">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" id="dicas-breadcrumb">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Início</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name" aria-current="page">Dicas de Manutenção</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ol>
+  </div>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <div class="page-hero-tag">Guia Técnico</div>
+    <h1 id="page-title">Dicas de <span>Manutenção</span> de Impressoras</h1>
+    <p class="page-hero-sub">Resolva os problemas mais comuns antes de chamar o técnico — e saiba quando é hora de chamar a RC Impressoras.</p>
+  </div>
+</section>
+
+<!-- ── Tips Content ── -->
+<section class="tips-page" aria-label="Dicas de manutenção">
+  <div class="container">
+
+    <!-- Table of Contents -->
+    <nav class="tips-toc" aria-label="Índice do conteúdo">
+      <p>Neste guia</p>
+      <ol>
+        <li><a href="#nao-imprime">Impressora Não Imprime: O Que Fazer?</a></li>
+        <li><a href="#limpar-cabecote">Como Limpar o Cabeçote da Impressora</a></li>
+        <li><a href="#falhando">Impressora Falhando na Impressão: Causas e Soluções</a></li>
+        <li><a href="#custo-conserto">Quanto Custa Consertar uma Impressora?</a></li>
+        <li><a href="#mancha">Impressora com Mancha: Como Resolver</a></li>
+      </ol>
+    </nav>
+
+    <!-- ─────────────────────────────────────
+         SEÇÃO 1 — Impressora Não Imprime
+    ────────────────────────────────────── -->
+    <article class="tip-section" id="nao-imprime" aria-labelledby="s1-title">
+      <div class="tip-section-tag">Solução de Problemas</div>
+      <h2 id="s1-title">Impressora Não Imprime: <span>O Que Fazer?</span></h2>
+      <div class="tip-divider" aria-hidden="true"></div>
+
+      <p>Nada mais frustrante do que enviar um documento e a impressora simplesmente não responder. Antes de entrar em pânico — ou chamar o técnico — existe um protocolo de diagnóstico que resolve a maioria dos casos em menos de dez minutos. Siga os passos abaixo na ordem apresentada, pois cada etapa descarta uma causa possível.</p>
+
+      <p>Problemas de comunicação entre computador e impressora são a causa mais frequente. Pode ser um cabo frouxo, um driver corrompido após atualização do Windows, ou a impressora configurada em modo offline sem que o usuário perceba. Em ambientes corporativos, impressoras de rede ainda sofrem com conflitos de IP e servidores de impressão sobrecarregados.</p>
+
+      <ul class="tip-checklist" aria-label="Checklist de diagnóstico">
+        <li>Verifique o cabo USB ou a conexão Wi-Fi — desconecte e reconecte o cabo; reinicie o roteador se for conexão sem fio</li>
+        <li>Abra "Dispositivos e Impressoras" no Windows e certifique-se de que a impressora correta está definida como padrão e não está em modo offline</li>
+        <li>Limpe a fila de impressão: vá em Serviços do Windows, pare o "Spooler de Impressão", delete os arquivos da pasta C:\Windows\System32\spool\PRINTERS e reinicie o serviço</li>
+        <li>Atualize ou reinstale os drivers: baixe o driver mais recente diretamente no site do fabricante (HP, Epson, Canon, Brother) — evite drivers genéricos do Windows</li>
+        <li>Confira o nível de toner ou tinta: mesmo com "pouco" toner, algumas impressoras bloqueiam a impressão por segurança</li>
+        <li>Imprima uma página de teste direto pelo painel da impressora (sem envolver o computador) para confirmar se o problema é no equipamento ou no driver</li>
+      </ul>
+
+      <p>Se a página de teste sair normalmente, o problema está no software ou na conexão — reinstale o driver. Se a página de teste também falhar, o problema é mecânico ou eletrônico e exige assistência técnica.</p>
+
+      <div class="tip-cta" role="complementary" aria-label="Chamada para ação">
+        <div>
+          <strong>Problema não resolvido? Chame um técnico.</strong>
+          <p>Diagnóstico gratuito na RC Impressoras. Respondemos em até 30 minutos no WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Minha%20impressora%20n%C3%A3o%20imprime.%20Preciso%20de%20ajuda." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </article>
+
+    <!-- ─────────────────────────────────────
+         SEÇÃO 2 — Limpar Cabeçote
+    ────────────────────────────────────── -->
+    <article class="tip-section" id="limpar-cabecote" aria-labelledby="s2-title">
+      <div class="tip-section-tag">Manutenção Preventiva</div>
+      <h2 id="s2-title">Como Limpar o <span>Cabeçote da Impressora</span></h2>
+      <div class="tip-divider" aria-hidden="true"></div>
+
+      <p>O cabeçote de impressão é a peça responsável por depositar a tinta no papel com precisão milimétrica. Em impressoras jato de tinta (inkjet) como HP, Epson e Canon, os bicos do cabeçote podem entupir quando a impressora fica parada por mais de uma ou duas semanas — a tinta resseca e bloqueia a passagem. O resultado são listras brancas, cores apagadas ou ausência total de impressão.</p>
+
+      <p>Há duas abordagens de limpeza: automática (pelo software) e manual (com componentes físicos). Sempre tente a automática primeiro, pois a manual feita de forma incorreta pode danificar os bicos permanentemente.</p>
+
+      <ol class="tip-steps" aria-label="Passo a passo de limpeza de cabeçote">
+        <li><span><strong>Limpeza automática pelo Windows:</strong> Acesse Painel de Controle → Dispositivos e Impressoras → clique com o botão direito na sua impressora → Preferências de Impressão → aba Manutenção → Limpeza de Cabeçote. Execute o ciclo completo (pode pedir para repetir 2 a 3 vezes).</span></li>
+        <li><span><strong>Limpeza automática pelo painel:</strong> Na maioria dos modelos Epson e Canon, há um botão de manutenção no painel físico. Consulte o manual para a sequência de teclas exata do seu modelo.</span></li>
+        <li><span><strong>Impressão de página de diagnóstico:</strong> Após a limpeza, imprima uma página de teste (nozzle check). Se as linhas ainda estiverem falhando, repita o ciclo mais uma vez.</span></li>
+        <li><span><strong>Limpeza manual (apenas se automática falhar):</strong> Desligue e desconecte a impressora. Remova o cartucho com cuidado. Com um pano de microfibra limpo e levemente umedecido em álcool isopropílico 70%, passe suavemente nos bicos do cabeçote — nunca esfregue. Aguarde 5 minutos para secar antes de recolocar o cartucho.</span></li>
+        <li><span><strong>Frequência recomendada:</strong> Execute a limpeza automática a cada 30 dias em uso intenso, ou sempre que a impressora ficar parada por mais de 15 dias. Para ambientes industriais com impressoras Zebra ou Lexmark de alto volume, a manutenção preventiva mensal é obrigatória.</span></li>
+      </ol>
+
+      <div class="tip-note" role="note">
+        <strong>Atenção:</strong> A limpeza automática consome tinta. Se os cartuchos estiverem abaixo de 20%, reponha antes de executar o ciclo para evitar que o cabeçote opere a seco — isso pode queimar os bicos de forma irreversível.
+      </div>
+
+      <div class="tip-cta" role="complementary" aria-label="Chamada para ação">
+        <div>
+          <strong>Cabeçote entupido mesmo após limpeza?</strong>
+          <p>Pode ser entupimento severo ou cabeçote danificado. A RC Impressoras faz a limpeza ultrassônica profissional em São Paulo.</p>
+        </div>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Preciso%20limpar%20o%20cabe%C3%A7ote%20da%20minha%20impressora." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </article>
+
+    <!-- ─────────────────────────────────────
+         SEÇÃO 3 — Impressora Falhando
+    ────────────────────────────────────── -->
+    <article class="tip-section" id="falhando" aria-labelledby="s3-title">
+      <div class="tip-section-tag">Diagnóstico</div>
+      <h2 id="s3-title">Impressora Falhando na Impressão: <span>Causas e Soluções</span></h2>
+      <div class="tip-divider" aria-hidden="true"></div>
+
+      <p>Impressão com listras, texto cortado, páginas em branco intercaladas com impressões normais — esses são sinais de que algo está falhando no caminho entre o arquivo digital e o papel. O desafio é identificar qual das quatro áreas está com problema, pois a solução muda completamente dependendo da causa.</p>
+
+      <p>Um diagnóstico eficiente começa pelas causas mais simples e avança para as mais complexas. Verifique sempre na seguinte ordem: consumíveis (toner/tinta), cabeçote, mecanismo de alimentação de papel e, por último, placa eletrônica. Pular etapas pode levar à troca desnecessária de peças caras.</p>
+
+      <div class="diag-grid" aria-label="Diagnóstico por componente">
+        <div class="diag-card">
+          <div class="diag-card-title">Cabeçote / Bicos</div>
+          <p>Listras brancas horizontais em inkjet. Solução: ciclo de limpeza automática pelo driver (2 a 3 vezes). Se persistir, limpeza manual com álcool isopropílico ou substituição do cabeçote.</p>
+        </div>
+        <div class="diag-card">
+          <div class="diag-card-title">Toner / Tinta</div>
+          <p>Impressão pálida, desaparecendo gradualmente. Em laser, retire o cartucho de toner, agite horizontalmente com suavidade e recoloque — isso distribui o pó residual e ganha mais algumas centenas de páginas. Substitua o cartucho em seguida.</p>
+        </div>
+        <div class="diag-card">
+          <div class="diag-card-title">Rolos de Alimentação</div>
+          <p>Papel amassado, alimentação dupla ou atolamentos frequentes. Os rolos acumulam papel em pó e sujeira com o tempo. Limpe com pano levemente úmido. Rolos muito desgastados precisam ser trocados — peça de baixo custo com alta frequência em impressoras de alto volume.</p>
+        </div>
+        <div class="diag-card">
+          <div class="diag-card-title">Qualidade do Papel</div>
+          <p>Papel úmido ou fora da gramatura especificada causa falhas de alimentação e manchas. Sempre guarde o papel em local seco, de preferência na embalagem original. Para impressoras laser industriais (Zebra, Lexmark), use apenas etiquetas e papéis homologados pelo fabricante.</p>
+        </div>
+      </div>
+
+      <p>Em impressoras multifuncionais Brother e Samsung para escritório, falhas intermitentes muitas vezes indicam problema na placa de controle — especialmente após queda de energia ou pico de tensão. O uso de estabilizador de tensão (não apenas filtro de linha) é uma proteção essencial para equipamentos de alto valor.</p>
+
+      <div class="tip-cta" role="complementary" aria-label="Chamada para ação">
+        <div>
+          <strong>Falha persistente mesmo após diagnóstico?</strong>
+          <p>Atendemos Vila Mariana e toda São Paulo. Diagnóstico técnico completo sem custo — pague só pelo serviço aprovado.</p>
+        </div>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Minha%20impressora%20est%C3%A1%20falhando%20na%20impress%C3%A3o.%20Preciso%20de%20diagn%C3%B3stico." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </article>
+
+    <!-- ─────────────────────────────────────
+         SEÇÃO 4 — Custo do Conserto
+    ────────────────────────────────────── -->
+    <article class="tip-section" id="custo-conserto" aria-labelledby="s4-title">
+      <div class="tip-section-tag">Transparência de Preços</div>
+      <h2 id="s4-title">Quanto Custa <span>Consertar uma Impressora?</span></h2>
+      <div class="tip-divider" aria-hidden="true"></div>
+
+      <p>Essa é a pergunta mais frequente que recebemos. A resposta honesta é: depende do problema, da marca e da disponibilidade de peças no mercado nacional. O que podemos garantir é total transparência — na RC Impressoras o diagnóstico é sempre gratuito, e você aprova o orçamento antes de qualquer serviço ser executado.</p>
+
+      <p>A tabela abaixo apresenta as faixas de preço praticadas para os serviços mais comuns em impressoras residenciais, de escritório e industriais. Os valores refletem o mercado da Grande São Paulo em 2026 e podem variar conforme o modelo específico e a complexidade do reparo.</p>
+
+      <table class="price-table" aria-label="Tabela de preços de conserto de impressora">
+        <thead>
+          <tr>
+            <th scope="col">Tipo de Serviço</th>
+            <th scope="col">Faixa de Preço</th>
+            <th scope="col">Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Limpeza geral (preventiva)</td>
+            <td class="price-val">R$ 80 – R$ 150</td>
+            <td>Inclui cabeçote, rolos e sensores</td>
+          </tr>
+          <tr>
+            <td>Troca de rolos de alimentação</td>
+            <td class="price-val">R$ 120 – R$ 220</td>
+            <td>Peça + mão de obra</td>
+          </tr>
+          <tr>
+            <td>Troca de sensor ou correia</td>
+            <td class="price-val">R$ 150 – R$ 350</td>
+            <td>Varia por modelo e disponibilidade</td>
+          </tr>
+          <tr>
+            <td>Reparo de fusor (laser)</td>
+            <td class="price-val">R$ 180 – R$ 400</td>
+            <td>Peça importada pode majorar o valor</td>
+          </tr>
+          <tr>
+            <td>Substituição de cabeçote inkjet</td>
+            <td class="price-val">R$ 200 – R$ 500</td>
+            <td>HP e Epson têm preços distintos</td>
+          </tr>
+          <tr>
+            <td>Reparo de placa eletrônica</td>
+            <td class="price-val">R$ 300 – R$ 600</td>
+            <td>Micro-solda, troca de componente SMD</td>
+          </tr>
+          <tr>
+            <td>Impressoras industriais (Zebra, Lexmark)</td>
+            <td class="price-val">Sob consulta</td>
+            <td>Peças com lead time de importação</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-note" role="note">
+        <strong>Dica de economia:</strong> A manutenção preventiva semestral (R$ 80–R$ 150) evita reparos emergenciais que facilmente chegam a R$ 400. Para frotas de 5 ou mais impressoras, consulte nosso contrato de manutenção mensal com preço fixo.
+      </div>
+
+      <p>Um critério importante na decisão de consertar ou substituir: se o custo do reparo superar 60% do valor de uma impressora nova equivalente, a troca geralmente é mais vantajosa a médio prazo. Nosso técnico sempre apresenta essa análise durante o diagnóstico.</p>
+
+      <div class="tip-cta" role="complementary" aria-label="Chamada para ação">
+        <div>
+          <strong>Quer um orçamento preciso sem compromisso?</strong>
+          <p>Diagnóstico gratuito com laudo técnico. Atendemos presencialmente em Vila Mariana ou coletamos o equipamento em toda São Paulo.</p>
+        </div>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20conserto%20da%20minha%20impressora." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Solicitar Orçamento
+        </a>
+      </div>
+    </article>
+
+    <!-- ─────────────────────────────────────
+         SEÇÃO 5 — Impressora com Mancha
+    ────────────────────────────────────── -->
+    <article class="tip-section" id="mancha" aria-labelledby="s5-title">
+      <div class="tip-section-tag">Resolução de Defeitos</div>
+      <h2 id="s5-title">Impressora com Mancha: <span>Como Resolver</span></h2>
+      <div class="tip-divider" aria-hidden="true"></div>
+
+      <p>Manchas na impressão são um dos problemas mais incômodos justamente pela variedade de causas possíveis. Uma mancha preta no centro da folha indica algo completamente diferente de uma mancha clara nas bordas ou de listras horizontais no texto. Identificar o padrão da mancha é o primeiro passo para o diagnóstico correto.</p>
+
+      <p>Em impressoras laser, manchas são quase sempre causadas por três componentes: o cartucho de toner (toner vazando ou cilindro arranhado), o fusor (que fixa o toner no papel por calor) ou o tambor fotossensível. Em inkjet, o problema geralmente está no cabeçote sujo ou em um cartucho com vedação danificada.</p>
+
+      <ul class="causes-list" aria-label="Causas e soluções para manchas">
+        <li>
+          <strong>Mancha preta em faixas regulares (laser)</strong>
+          Indica cilindro (drum) arranhado ou com defeito. O padrão se repete a cada volta do cilindro — mapeie a distância entre as manchas para confirmar. Solução: troca do cilindro ou do kit de manutenção completo.
+        </li>
+        <li>
+          <strong>Toner espalhado, página suja ao toque</strong>
+          O fusor não está fixando o toner corretamente. Pode ser fusor com temperatura incorreta, rolo de pressão desgastado ou sujo. Solução: limpeza do fusor (apenas profissional) ou substituição — peça sensível ao calor, não tente limpar com solvente em casa.
+        </li>
+        <li>
+          <strong>Mancha colorida ou tinta borrada (inkjet)</strong>
+          Cartucho com vazamento ou vedação comprometida. Remova o cartucho, inspecione visualmente se há tinta derramada na base do cartucho e nos trilhos internos. Limpe com cotonete umedecido em álcool isopropílico. Substitua o cartucho se houver rachadura visível.
+        </li>
+        <li>
+          <strong>Listras horizontais em cores específicas</strong>
+          Bicos do cabeçote entupidos para aquela cor. Execute o ciclo de limpeza automática de cabeçote pelo driver. Se persistir após 3 ciclos, é necessário limpeza manual profissional ou substituição do cabeçote.
+        </li>
+        <li>
+          <strong>Mancha nas bordas ou ghost image (imagem fantasma)</strong>
+          Resíduo de toner de impressões anteriores reaparecendo na folha — sinal claro de fusor ou cilindro no fim da vida útil. Não há solução caseira eficaz. A troca do fusor resolve em 100% dos casos.
+        </li>
+      </ul>
+
+      <p>Para manchas leves em inkjet com cabeçote acessível, a limpeza doméstica com álcool isopropílico pode resolver. Para qualquer problema em impressoras laser que envolva fusor, cilindro ou placa — o risco de dano permanente por intervenção incorreta é alto. Nesses casos, a assistência técnica especializada é sempre o caminho mais econômico a longo prazo.</p>
+
+      <div class="tip-cta" role="complementary" aria-label="Chamada para ação">
+        <div>
+          <strong>Mancha não some? Chame quem entende.</strong>
+          <p>15 anos de experiência em impressoras HP, Canon, Epson, Brother, Zebra e Lexmark. Garantia de 90 dias em todos os serviços.</p>
+        </div>
+        <a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Minha%20impressora%20est%C3%A1%20saindo%20com%20mancha.%20Pode%20me%20ajudar%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="danger-tape" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <p class="logo-main"><span>RC</span> Impressoras</p>
+        <span class="logo-sub">Assistência Técnica · Vila Mariana</span>
+        <p>Assistência técnica robusta para quem não pode parar. Diagnóstico grátis, garantia 90 dias.</p>
+        <p style="font-size:.85rem;color:var(--text-muted)">
+          <strong style="color:var(--text)">Seg-Sex:</strong> 8h às 18h &nbsp;|&nbsp;
+          <strong style="color:var(--text)">Sáb:</strong> 8h às 13h
+        </p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <p class="footer-col-title">Navegação</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="dicas.html" aria-current="page">Dicas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="index.html#faq">Perguntas Frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-hours">
+        <p class="footer-col-title">Contato</p>
+        <p><strong>(11) 3136-0415</strong></p>
+        <p style="margin-top:.5rem">
+          <a href="https://wa.me/551131360415" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">WhatsApp</a>
+        </p>
+        <p style="margin-top:1rem;font-size:.85rem">Rua Ouvidor Peleja, 660<br>Vila Mariana · São Paulo - SP<br>CEP 04128-001</p>
+      </div>
+
+    </div>
+
+    <div class="partner-network">
+      <p>Rede de Assistência Técnica:</p>
+      <a href="https://sosimpressora.com" target="_blank" rel="noopener">SOS Impressora</a> |
+      <a href="https://pontualtech.net" target="_blank" rel="noopener">PontualTech</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RC Impressoras. Todos os direitos reservados.</p>
+      <p><a href="https://rcimpressoras.com">rcimpressoras.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/551131360415?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  <span class="wa-tooltip">Falar no WhatsApp</span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
