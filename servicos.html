@@ -14,8 +14,18 @@
   <meta property="og:url" content="https://rcimpressoras.com/servicos.html">
   <meta property="og:type" content="website">
 
+  <!-- Geo Meta Tags -->
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="Vila Mariana, São Paulo">
+  <meta name="geo.position" content="-23.5872;-46.6368">
+  <meta name="ICBM" content="-23.5872, -46.6368">
+  <meta name="author" content="RC Impressoras">
+  <meta name="revisit-after" content="7 days">
+  <meta name="language" content="pt-BR">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formsubmit.co">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
@@ -27,33 +37,83 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "RC Impressoras",
-      "url": "https://rcimpressoras.com",
-      "telephone": "+55-11-3136-0415",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua Ouvidor Peleja, 660",
-        "addressLocality": "Vila Mariana",
-        "addressRegion": "SP",
-        "postalCode": "04128-001",
-        "addressCountry": "BR"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://rcimpressoras.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Serviços",
+            "item": "https://rcimpressoras.com/servicos.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rcimpressoras.com/servicos.html#conserto",
+        "name": "Conserto de Impressoras",
+        "description": "Diagnóstico preciso e reparo rápido de impressoras HP, Canon, Epson, Brother, Samsung, Zebra e Lexmark. Garantia de 90 dias.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://rcimpressoras.com/#business",
+          "name": "RC Impressoras",
+          "url": "https://rcimpressoras.com",
+          "telephone": "+55-11-3136-0415",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Ouvidor Peleja, 660",
+            "addressLocality": "Vila Mariana",
+            "addressRegion": "SP",
+            "postalCode": "04128-001",
+            "addressCountry": "BR"
+          }
+        },
+        "serviceType": "Conserto de Impressoras",
+        "areaServed": {"@type": "City", "name": "São Paulo"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL", "description": "Diagnóstico gratuito"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rcimpressoras.com/servicos.html#epson",
+        "name": "Especialistas Epson",
+        "description": "Técnicos certificados em todas as linhas Epson: EcoTank, WorkForce, SureColor, L-Series. Peças originais.",
+        "provider": {"@id": "https://rcimpressoras.com/#business"},
+        "serviceType": "Manutenção Epson",
+        "areaServed": {"@type": "City", "name": "São Paulo"},
+        "brand": {"@type": "Brand", "name": "Epson"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rcimpressoras.com/servicos.html#preventiva",
+        "name": "Manutenção Preventiva",
+        "description": "Planos mensais e trimestrais para empresas. Redução de até 60% em paradas não programadas.",
+        "provider": {"@id": "https://rcimpressoras.com/#business"},
+        "serviceType": "Manutenção Preventiva de Impressoras",
+        "areaServed": {"@type": "City", "name": "São Paulo"},
+        "offers": [
+          {"@type": "Offer", "name": "Plano Mensal", "priceCurrency": "BRL"},
+          {"@type": "Offer", "name": "Plano Trimestral", "priceCurrency": "BRL"},
+          {"@type": "Offer", "name": "Contrato Anual", "priceCurrency": "BRL"}
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://rcimpressoras.com/servicos.html#domiciliar",
+        "name": "Atendimento Domiciliar",
+        "description": "Técnico vai até você em casa, escritório ou fábrica. Sem taxa de deslocamento em toda São Paulo.",
+        "provider": {"@id": "https://rcimpressoras.com/#business"},
+        "serviceType": "Assistência Técnica Domiciliar",
+        "areaServed": {"@type": "City", "name": "São Paulo"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL", "description": "Sem taxa de deslocamento"}
       }
-    },
-    "serviceType": "Assistência Técnica de Impressoras",
-    "areaServed": "São Paulo",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços RC Impressoras",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Conserto de Impressoras"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Especialistas Epson"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manutenção Preventiva"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Atendimento Domiciliar"}}
-      ]
-    }
+    ]
   }
   </script>
 </head>
@@ -313,6 +373,11 @@
         <p style="margin-top:.5rem"><a href="https://wa.me/551131360415" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">WhatsApp</a></p>
         <p style="margin-top:1rem;font-size:.85rem;color:var(--text-muted)">Rua Ouvidor Peleja, 660<br>Vila Mariana · SP<br>CEP 04128-001</p>
       </div>
+    </div>
+    <div class="partner-network">
+      <p>Rede de Assistência Técnica:</p>
+      <a href="https://sosimpressora.com" target="_blank" rel="noopener">SOS Impressora</a> |
+      <a href="https://pontualtech.net" target="_blank" rel="noopener">PontualTech</a>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 RC Impressoras. Todos os direitos reservados.</p>
